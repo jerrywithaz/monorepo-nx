@@ -2,6 +2,7 @@
   "name": "@zerry/package-1",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "license": "MIT",
   "devDependencies": {},
   "scripts": {
     "build": "tsc index.ts --outDir dist"

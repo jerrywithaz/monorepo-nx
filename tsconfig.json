@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@zerry/package-1": ["packages/@zerry/package-1/src/index.ts"],
+      "@zerry/package-2": ["packages/@zerry/package-2/src/index.ts"]
+    }
+  },
+  "include": ["./packages", "./packages/**/package.json"]
+}
