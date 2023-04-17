@@ -2,7 +2,11 @@
   "name": "monorepo-nx",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:package-1": "nx build @zerry/package-1",
+    "build:package-2": "nx build @zerry/package-2",
+    "build": "yarn build:package-1 && yarn build:package-2"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
