@@ -1,7 +1,7 @@
-import { package2 } from './package-2';
+import { isOdd } from './package-2';
 
 describe('package2', () => {
   it('should work', () => {
-    expect(package2()).toEqual('package-2');
+    expect(isOdd(3)).toEqual(true);
   });
 });

@@ -1,3 +1,1 @@
-export function package1(): string {
-  return 'package-1';
-}
+export const isEven = (x: number) => x % 2 === 0;

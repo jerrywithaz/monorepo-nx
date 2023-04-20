@@ -1,3 +1,3 @@
-export function package2(): string {
-  return 'package-2';
-}
+import { isEven } from '@zerry/package-1';
+
+export const isOdd = (x: number) => !isEven(x);
