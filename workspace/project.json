@@ -56,7 +56,39 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "preset": "conventional",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "Breaking",
+              "section": "Breaking"
+            },
+            {
+              "type": "Update",
+              "section": "Updates"
+            },
+            {
+              "type": "New",
+              "section": "New"
+            },
+            {
+              "type": "Docs",
+              "hidden": true
+            },
+            {
+              "type": "Fix",
+              "section": "Fixes"
+            },
+            {
+              "type": "Chore",
+              "hidden": true
+            },
+            {
+              "type": "Ignore",
+              "hidden": true
+            }
+          ]
+        },
         "commitMessageFormat": "chore(release): release version ${version}",
         "noVerify": true,
         "postTargets": ["workspace:release-notes", "workspace:publish"],
