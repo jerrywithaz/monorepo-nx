@@ -1,4 +1,19 @@
 {
   "extends": ["@commitlint/config-conventional"],
-  "rules": {}
+  "rules": {
+    "body-leading-blank": [1, "always"],
+    "footer-leading-blank": [1, "always"],
+    "header-max-length": [2, "always", 72],
+    "scope-empty": [2, "always"],
+    "subject-case": [2, "never", []],
+    "subject-empty": [2, "never"],
+    "subject-full-stop": [2, "never", "."],
+    "type-case": [2, "always", "pascal-case"],
+    "type-empty": [2, "never"],
+    "type-enum": [
+      2,
+      "always",
+      ["Breaking", "Update", "New", "Build", "Docs", "Fix", "Chore", "Ignore"]
+    ]
+  }
 }
