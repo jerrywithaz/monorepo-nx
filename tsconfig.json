@@ -9,11 +9,8 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@zerry": ["packages/package-1/src/index.ts"],
-      "@zerry/package-1": ["packages/@zerry/package-1/src/index.ts"],
-      "@zerry/package-2": ["packages/@zerry/package-2/src/index.ts"],
-      "@zerry/package-3": ["packages/package-3/src/index.ts"],
-      "no": ["packages/@zerry/package-1/src/index.ts"]
+      "@zerry/package-1": ["packages/package-1/src/index.ts"],
+      "@zerry/package-2": ["packages/package-2/src/index.ts"]
     }
   },
   "include": ["./packages", "./packages/**/package.json"]

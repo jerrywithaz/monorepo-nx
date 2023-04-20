@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:package-1": "nx generate @nrwl/node:library package-3 --buildable --publishable --importPath=@zerry/package-3",
-    "build:package-2": "nx generate @nrwl/node:library package-2 --buildable --publishable --importPath=@zerry/package-2",
+    "generate:package-1": "nx generate @nrwl/node:library package-1 --buildable --publishable --importPath=@zerry/package-1",
+    "generate:package-2": "nx generate @nrwl/node:library package-2 --buildable --publishable --importPath=@zerry/package-2",
     "build": "yarn build:package-1 && yarn build:package-2"
   },
   "private": true,
