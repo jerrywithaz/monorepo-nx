@@ -1,78 +1,79 @@
 {
-    "$schema": "../node_modules/nx/schemas/project-schema.json",
-    "name": "workspace",
-    "targets": {
-      "prerelease": {
-        "executor": "@jscutlery/semver:version",
-        "options": {
-          "commitMessageFormat": "chore(prerelease): prerelease next version ${version}",
-          "noVerify": true,
-          "postTargets": ["workspace:publish-next"],
-          "preid": "next",
-          "releaseAs": "prerelease",
-          "syncVersions": true
-        }
-      },
-      "publish": {
-        "executor": "nx:run-commands",
-        "options": {
-          "commands": [
-            {
-              "command": "nx run-many --target=build --all --exclude=workspace",
-              "forwardAllArgs": false
-            },
-            {
-              "command": "nx run-many --target=update-peer-dependencies --all --exclude=workspace --skip-nx-cache",
-              "forwardAllArgs": false
-            },
-            {
-              "command": "nx run-many --target=publish --all --exclude=workspace --no-build=true",
-              "forwardAllArgs": false
-            }
-          ],
-          "parallel": false
-        }
-      },
-      "publish-next": {
-        "executor": "nx:run-commands",
-        "options": {
-          "commands": [
-            {
-              "command": "nx run-many --target=build --all --exclude=workspace",
-              "forwardAllArgs": false
-            },
-            {
-              "command": "nx run-many --target=update-peer-dependencies --all --exclude=workspace --skip-nx-cache",
-              "forwardAllArgs": false
-            },
-            {
-              "command": "nx run-many --target=publish --all --exclude=workspace --no-build=true --tag=next",
-              "forwardAllArgs": false
-            }
-          ],
-          "parallel": false
-        }
-      },
-      "version": {
-        "executor": "@jscutlery/semver:version",
-        "options": {
-          "commitMessageFormat": "chore(release): release version ${version}",
-          "noVerify": true,
-          "postTargets": ["workspace:release-notes", "workspace:publish"],
-          "syncVersions": true,
-          "trackDeps": true
-        }
-      },
-      "release-notes": {
-        "executor": "@jscutlery/semver:github",
-        "options": {
-          "notes": "${notes}",
-          "tag": "${tag}"
-        }
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "name": "workspace",
+  "targets": {
+    "prerelease": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "commitMessageFormat": "chore(prerelease): prerelease next version ${version}",
+        "noVerify": true,
+        "postTargets": ["workspace:publish-next"],
+        "preid": "next",
+        "releaseAs": "prerelease",
+        "syncVersions": true
       }
     },
-    "useGroupsWhenIssueIsResolved": [
-      "https://github.com/jscutlery/semver/issues/420",
-      "https://github.com/jscutlery/semver/issues/547"
-    ]
-  }
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run-many --target=build --all --exclude=workspace",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "nx run-many --target=update-peer-dependencies --all --exclude=workspace --skip-nx-cache",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "nx run-many --target=publish --all --exclude=workspace --no-build=true",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "publish-next": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run-many --target=build --all --exclude=workspace",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "nx run-many --target=update-peer-dependencies --all --exclude=workspace --skip-nx-cache",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "nx run-many --target=publish --all --exclude=workspace --no-build=true --tag=next",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "commitMessageFormat": "chore(release): release version ${version}",
+        "noVerify": true,
+        "postTargets": ["workspace:release-notes", "workspace:publish"],
+        "syncVersions": true,
+        "trackDeps": true
+      }
+    },
+    "release-notes": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "notes": "${notes}",
+        "tag": "${tag}"
+      }
+    }
+  },
+  "useGroupsWhenIssueIsResolved": [
+    "https://github.com/jscutlery/semver/issues/420",
+    "https://github.com/jscutlery/semver/issues/547"
+  ]
+}
