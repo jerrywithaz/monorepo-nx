@@ -61,7 +61,7 @@
           "types": [
             {
               "type": "Breaking",
-              "section": "Breaking"
+              "section": "Breaking Changes"
             },
             {
               "type": "Update",
