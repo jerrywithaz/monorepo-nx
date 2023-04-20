@@ -60,31 +60,31 @@
           "name": "conventionalcommits",
           "types": [
             {
-              "type": "Breaking",
+              "type": "breaking",
               "section": "Breaking Changes"
             },
             {
-              "type": "Update",
+              "type": "update",
               "section": "Updates"
             },
             {
-              "type": "New",
+              "type": "new",
               "section": "New"
             },
             {
-              "type": "Docs",
+              "type": "docs",
               "hidden": true
             },
             {
-              "type": "Fix",
+              "type": "fix",
               "section": "Fixes"
             },
             {
-              "type": "Chore",
+              "type": "chore",
               "hidden": true
             },
             {
-              "type": "Ignore",
+              "type": "ignore",
               "hidden": true
             }
           ]
