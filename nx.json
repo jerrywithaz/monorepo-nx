@@ -7,10 +7,35 @@
       }
     }
   },
+  "affected": {
+    "defaultBase": "main"
+  },
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "zerry",
   "targetDefaults": {
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "push": true,
+        "noVerify": true,
+        "postTargets": ["semver:publish", "semver:github"],
+        "commitMessageFormat": "release(${projectName}): 🎸 cut release to ${version}"
+      },
+      "dependsOn": ["build"]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "generateNotes": true,
+        "notesStartTag": "${previousTag}"
+      }
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
     "test": {
       "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"]
     },
@@ -21,5 +46,17 @@
         "{workspaceRoot}/.eslintignore"
       ]
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
+  "targetDependencies": {
+    "version": [
+      {
+        "target": "version",
+        "projects": "dependencies"
+      }
+    ]
   }
 }

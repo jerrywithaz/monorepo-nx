@@ -21,7 +21,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - name: Version
         shell: bash
-        run: yarn nx run workspace:version
+        run: yarn nx run workspace:version --syncVersions --trackDeps
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Tag Last Release
