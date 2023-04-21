@@ -10,7 +10,9 @@
         "postTargets": ["workspace:publish-next"],
         "preid": "next",
         "releaseAs": "prerelease",
-        "syncVersions": true
+        "syncVersions": true,
+        "trackDeps": true,
+        "push": true
       }
     },
     "publish": {
@@ -117,7 +119,8 @@
         "noVerify": true,
         "postTargets": ["workspace:release-notes", "workspace:publish"],
         "syncVersions": true,
-        "trackDeps": true
+        "trackDeps": true,
+        "push": true
       }
     },
     "release-notes": {
