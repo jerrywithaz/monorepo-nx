@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.0.12](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.11...v0.0.12) (2023-04-21)
+
+
+### New
+
+* Add tests ([d10b80e](https://github.com/jerrywithaz/monorepo-nx/commit/d10b80ef700ba3996fead3abd3bf68605cf02af3))
+* Add tests ([f30d835](https://github.com/jerrywithaz/monorepo-nx/commit/f30d8352437e41336d615b803146867f842fd1c5))
+
 ## [0.0.11](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.10...v0.0.11) (2023-04-21)
 
 
