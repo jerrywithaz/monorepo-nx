@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.0.6](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.5...v0.0.6) (2023-04-21)
+
+
+### New
+
+* Add npm publish ([bac29f8](https://github.com/jerrywithaz/monorepo-nx/commit/bac29f8570a31725d0a4ecc9e1727aba5412a16b))
+* Add npm publish ([4c1b98d](https://github.com/jerrywithaz/monorepo-nx/commit/4c1b98dcec0aa570607c8ca89bec309fef78beda))
+
 ## [0.0.5](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.4...v0.0.5) (2023-04-20)
 
 
