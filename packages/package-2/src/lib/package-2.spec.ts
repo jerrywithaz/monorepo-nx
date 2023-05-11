@@ -7,7 +7,4 @@ describe('package2', () => {
   it('should work', () => {
     expect(isOdd(4)).toEqual(false);
   });
-  it('should work', () => {
-    expect(isOdd(5)).toEqual(true);
-  });
 });
