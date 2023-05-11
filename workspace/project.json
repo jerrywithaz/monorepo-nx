@@ -56,17 +56,17 @@
       }
     },
     "lint": {
-        "executor": "nx:run-commands",
-        "options": {
-          "commands": [
-            {
-              "command": "nx run-many --target=lint --all --exclude=workspace",
-              "forwardAllArgs": false
-            }
-          ],
-          "parallel": false
-        }
-      },
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run-many --target=lint --all --exclude=workspace",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
     "test": {
       "executor": "nx:run-commands",
       "options": {
@@ -83,6 +83,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": {
+          "whatBump": "hey",
           "name": "conventionalcommits",
           "types": [
             {
@@ -113,6 +114,16 @@
               "type": "ignore",
               "hidden": true
             }
+          ],
+          "releaseRules": [
+            { "tag": "Breaking", "release": "major" },
+            { "tag": "Update", "release": "minor" },
+            { "tag": "New", "release": "minor" },
+            { "tag": "Build", "release": "minor" },
+            { "tag": "Docs", "release": "patch" },
+            { "tag": "Fix", "release": "patch" },
+            { "tag": "Chore", "release": false },
+            { "tag": "Ignore", "release": false }
           ]
         },
         "commitMessageFormat": "chore(release): release version ${version}",
