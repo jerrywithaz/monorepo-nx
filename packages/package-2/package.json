@@ -1,6 +1,6 @@
 {
   "name": "@zerry/package-2",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "dependencies": {
     "@zerry/package-1": "*"
   }
