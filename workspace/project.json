@@ -85,36 +85,6 @@
         "preset": {
           "whatBump": "hey",
           "name": "conventionalcommits",
-          "types": [
-            {
-              "type": "breaking",
-              "section": "Breaking Changes"
-            },
-            {
-              "type": "update",
-              "section": "Updates"
-            },
-            {
-              "type": "new",
-              "section": "New"
-            },
-            {
-              "type": "docs",
-              "hidden": true
-            },
-            {
-              "type": "fix",
-              "section": "Fixes"
-            },
-            {
-              "type": "chore",
-              "hidden": true
-            },
-            {
-              "type": "ignore",
-              "hidden": true
-            }
-          ],
           "releaseRules": [
             { "tag": "Breaking", "release": "major" },
             { "tag": "Update", "release": "minor" },
