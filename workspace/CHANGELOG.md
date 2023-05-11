@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.0.14](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.13...v0.0.14) (2023-05-11)
+
+
+### Breaking Changes
+
+* Remove Say Hello ([3d514d6](https://github.com/jerrywithaz/monorepo-nx/commit/3d514d676eceb4e64cb6e14ec44b317d0c2b8cbb))
+
 ## [0.0.13](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.12...v0.0.13) (2023-04-21)
 
 

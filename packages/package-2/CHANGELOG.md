@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.0.14](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.13...v0.0.14) (2023-05-11)
+
+
+### New
+
+* add isnotodd ([43d6ae4](https://github.com/jerrywithaz/monorepo-nx/commit/43d6ae441ea0907bd6d20a37fee24cef46c6fc81))
+* remove tests ([7a829ea](https://github.com/jerrywithaz/monorepo-nx/commit/7a829ea7c9824becf238325dcf6ec12c32b18775))
+
 ## [0.0.13](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.12...v0.0.13) (2023-04-21)
 
 ## [0.0.12](https://github.com/jerrywithaz/monorepo-nx/compare/v0.0.11...v0.0.12) (2023-04-21)
